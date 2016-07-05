@@ -1,19 +1,23 @@
 $(document).ready(function(){
-	var input = prompt("Input a Value", "");
 
-	var string;
-	for(var i=1; i < 101; i++){
-		string= ' ';
-		if (i%3 ===0){
-			string+="fizz";
+	var input = prompt("Input a Value", "");
+	var number = +input;
+
+	for(var i=1; i <= number; i++){ // 1 to number inclusive
+		if ((i % 3) === 0 && (i % 5) === 0) {
+			console.log("fizz buzz");
+			// creating an li element : <li>fizz buzz</li>
+			// appendTo ul with id = list
+		} else {
+			if (i%3 === 0){
+				console.log("fizz");
+			} else {
+				if (i%5 === 0){
+					console.log("buzz");
+				} else {
+					console.log(i);
+				}
+			}
 		}
-		if (i%5 ===0){
-			string+="buzz";
-		}
-		if (i%3 !==0 && i%5 !==0){
-			string+=i;
-		}
-		console.log(string);
 	};
 });
-	
