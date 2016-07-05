@@ -1,4 +1,6 @@
 $(document).ready(function(){
+	var input = prompt("Input a Value", "");
+
 	var string;
 	for(var i=1; i < 101; i++){
 		string= ' ';
