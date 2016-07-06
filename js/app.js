@@ -5,19 +5,18 @@ $(document).ready(function(){
 
 	for(var i=1; i <= number; i++){ // 1 to number inclusive
 		if ((i % 3) === 0 && (i % 5) === 0) {
-			console.log("fizz buzz");
-			// creating an li element : <li>fizz buzz</li>
-			// appendTo ul with id = list
+		$('#list').append('fizzbuzz');
 		} else {
 			if (i%3 === 0){
-				console.log("fizz");
+				$('#list').append('fizz');
 			} else {
 				if (i%5 === 0){
-					console.log("buzz");
+					$('#list').append('buzz');
 				} else {
-					console.log(i);
+					$('#list').append(i);
 				}
 			}
 		}
-	};
+	$('#list').append('<br>');
+	};	
 });
